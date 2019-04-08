@@ -39,7 +39,7 @@ make
 ```
 Tell our executable how to find libNiTE2.dylib
 ```
-install_name_tool -change libNiTE2.dylib @executable_path/../dependencies/Nite2.2/Redist/libNiTE2.dylib KinectFeed
+install_name_tool -change libNiTE2.dylib @executable_path/../Nite2.2/Redist/libNiTE2.dylib KinectFeed
 ```
 Copy the NiTE2 data folder into our executable's directory
 ```
