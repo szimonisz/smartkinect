@@ -6,13 +6,17 @@ Easy Setup:
 git clone https://github.com/szimonisz/smartkinect.git
 cd smartkinect
 ./install.sh
-./build/KinectFeed
+cd build
+make
+./KinectFeed
 #######################################################
 ```
 
 How ./install.sh works:
 
 complete these commands within root of cloned smartkinect repository folder
+
+NOTE: 'make' must be executed while inside of the build directory
 
 Installing libusb / OpenNI2 / OpenCV2
 ```

@@ -34,12 +34,10 @@ cd build
 echo "Moving NiTE2.2 Data folder to executable's root directory"
 cp -r ../Nite2.2/Redist/NiTE2 ./
 
-echo "Building and compiling KinectFeed"
+echo "Building a Makefile via CMake"
 cmake ..
-make
 
 echo "install_name_tool helper for KinectFeed->libNiTE2.dylib"
 install_name_tool -change libNiTE2.dylib @executable_path/../Nite2.2/Redist/libNiTE2.dylib KinectFeed
 
-
-echo "Installation is Complete. ./build/KinectFeed to run"
+echo "Installation is Complete. cd build && make && ./KinectFeed to run"
