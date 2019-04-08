@@ -1,6 +1,18 @@
 # smartkinect
 
-Easy Setup:
+##TODO:
+
+- NiTE UserTracker active user(s) highlighter viewer
+- Inverse active user highlight (a.k.a set non-user depth values to black, cut skeleton out of scene)
+- Depth camera smoothing
+- Depth camera upsampling / super-resolution
+- Camera Calibration: outputting distortion coefficients of each camera into a .ini file
+- Camera Calibration: outputting intrinsic and extrinsic camera matrix values into a .ini file (seperate program)
+- Depth Camera / RGB Camera Alignment
+- ...
+- ...
+
+##Easy Setup:
 ```
 #######################################################
 git clone https://github.com/szimonisz/smartkinect.git
@@ -12,7 +24,7 @@ cd build
 #######################################################
 ```
 
-How ./install.sh works:
+###How ./install.sh works:
 
 complete these commands within root of cloned smartkinect repository folder
 
