@@ -35,19 +35,22 @@ Copy dependent header files from OpenNI2 to our Nite2.2 include folder
 ```
 cp /usr/local/opt/openni2/include/ni2/{OniCAPI.h,OniPlatform.h,OniCTypes.h,OpenNI.h} ./Nite2.2/Include/
 ```
-Create a build folder, and cmake -> make our executable
+Create a build folder
 ```
 mkdir build && cd build
+```
+Copy the NiTE2 data folder into our executable's directory
+```
+cp -r ../Nite2.2/Redist/NiTE2 ./
+```
+cmake -> make (compile the program)
+```
 cmake ..
 make
 ```
 Tell our executable how to find libNiTE2.dylib
 ```
 install_name_tool -change libNiTE2.dylib @executable_path/../Nite2.2/Redist/libNiTE2.dylib KinectFeed
-```
-Copy the NiTE2 data folder into our executable's directory
-```
-cp -r ../Nite2.2/Redist/NiTE2 ./
 ```
 Run the program!
 ```
