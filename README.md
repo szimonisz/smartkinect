@@ -2,7 +2,7 @@
 
 Easy Setup:
 ```
-git clone https://github.com/szimonisz/smartkinect
+git clone https://github.com/szimonisz/smartkinect.git
 cd smartkinect
 ./install.sh
 ./build/KinectFeed
