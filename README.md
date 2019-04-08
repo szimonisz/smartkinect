@@ -50,6 +50,7 @@ Run the program!
 ./KinectFeed 
 ```
 
-NOTE: must run make from within the Makefile's directory
-      depending on how dependent software was installed originally, the absolute paths to these libraries may differ...
-      (CMakeLists.txt / install process could differ)
+NOTE: 
+must run make from within the Makefile's directory
+depending on how dependent software was installed originally, the absolute paths to these libraries may differ..
+(CMakeLists.txt / install process could differ)
