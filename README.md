@@ -71,6 +71,10 @@ Run the program!
 ./Build/KinectFeed 
 ```
 
+compile.sh is a helper script that will re-route the libNiTe2.dylib dependency path upon each new executable produced from the Makefile. 
+
+Use compile.sh rather than 'make'. The script will call make for you.
+
 NOTE: 
 must run make from within the Makefile's directory
 
