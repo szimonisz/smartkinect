@@ -27,7 +27,7 @@ tar xvf NiTE-MacOSX-x64-2.2.tar.zip
 tar xvf NiTE-MacOSX-x64-2.2.tar.bz2
 mv ./NiTE-MacOSX-x64-2.2 ./Nite2.2
 ```
-Tell libNiTE2 how to find it's dependant dynamic library: libOpenNI2.dylib
+Tell libNiTE2 how to find it's dependent dynamic library: libOpenNI2.dylib
 ```
 install_name_tool -change libOpenNI2.dylib /usr/local/opt/openni2/lib/ni2/libOpenNI2.dylib ./Nite2.2/Redist/libNiTE2.dylib
 ```
