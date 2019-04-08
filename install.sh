@@ -43,6 +43,6 @@ make
 #install_name_tool helper for KinectFeed->libNiTE2.dylib
 install_name_tool -change libNiTE2.dylib @executable_path/../Nite2.2/Redist/libNiTE2.dylib KinectFeed
 EOF
-chmod +x recompile.sh
+chmod +x compile.sh
 
 echo "Installation is Complete. cd build && ./compile.sh && ./KinectFeed to run"
