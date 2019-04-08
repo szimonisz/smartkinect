@@ -4,6 +4,7 @@ Setup:
 
 complete these commands within root of cloned smartkinect repository folder
 
+```
 install OpenNI2 via brew
 install OpenCV2 via brew
 
@@ -25,8 +26,9 @@ make
 install_name_tool -change libNiTE2.dylib @executable_path/../dependencies/Nite2.2/Redist/libNiTE2.dylib KinectFeed
 cp -r ../Nite2.2/Redist/NiTE2 ./
 ./KinectFeed 
+```
 
-#Good to go!
+Good to go!
 
 
 NOTE:
