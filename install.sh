@@ -37,7 +37,12 @@ cp -r ../Nite2.2/Redist/NiTE2 ./
 echo "Building a Makefile via CMake"
 cmake ..
 
-echo "install_name_tool helper for KinectFeed->libNiTE2.dylib"
+echo "Building the ./compile.sh helper script for developing"
+cat > compile.sh <<'EOF'
+make
+#install_name_tool helper for KinectFeed->libNiTE2.dylib
 install_name_tool -change libNiTE2.dylib @executable_path/../Nite2.2/Redist/libNiTE2.dylib KinectFeed
+EOF
+chmod +x recompile.sh
 
-echo "Installation is Complete. cd build && make && ./KinectFeed to run"
+echo "Installation is Complete. cd build && ./compile.sh && ./KinectFeed to run"
