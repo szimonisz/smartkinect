@@ -2,7 +2,7 @@
 
 ## TODO:
 
-- NiTE UserTracker active user(s) highlighter viewer
+- NiTE UserTracker active user(s) highlight viewer (outline NiTE defined users)
 - Inverse active user highlight (a.k.a set non-user depth values to black, cut skeleton out of scene)
 - Depth camera smoothing
 - Depth camera upsampling / super-resolution
