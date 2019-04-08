@@ -1,6 +1,6 @@
 # smartkinect
 
-##TODO:
+## TODO:
 
 - NiTE UserTracker active user(s) highlighter viewer
 - Inverse active user highlight (a.k.a set non-user depth values to black, cut skeleton out of scene)
@@ -12,7 +12,7 @@
 - ...
 - ...
 
-##Easy Setup:
+## Easy Setup:
 ```
 #######################################################
 git clone https://github.com/szimonisz/smartkinect.git
@@ -24,7 +24,7 @@ cd build
 #######################################################
 ```
 
-###How ./install.sh works:
+### How ./install.sh works:
 
 complete these commands within root of cloned smartkinect repository folder
 
@@ -87,7 +87,7 @@ compile.sh is a helper script that will re-route the libNiTe2.dylib dependency p
 
 Use compile.sh rather than 'make'. The script will call make for you.
 
-NOTE: 
+### NOTE: 
 must run make from within the Makefile's directory
 
 depending on how dependent software was installed originally, the absolute paths to these libraries may differ..
