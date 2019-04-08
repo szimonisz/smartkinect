@@ -69,7 +69,8 @@ int main()
         cv::Mat(colorFrame.getHeight(),colorFrame.getWidth(),CV_8UC3, (uchar*)colorFrame.getData()).copyTo(framecolor);
         memcpy(framecolor.data, imageBuffer, colorFrame.getDataSize());
 
-        cv::cvtColor(framecolor, framecolor, CV_BGR2RGB); //this will put colors right
+        //cv::cvtColor(framecolor, framecolor, CV_BGR2RGB); //this will put colors right
+        cv::cvtColor(framecolor, framecolor, cv::COLOR_BGR2RGB); //this will put colors right
          
         //DEPTH
 
