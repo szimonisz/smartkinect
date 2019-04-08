@@ -1,0 +1,25 @@
+cmake_minimum_required( VERSION 2.8.1 )
+
+project( KinectFeed )
+
+set( CMAKE_BUILD_TYPE Debug )
+set( SRC KinectFeed.h KinectFeed.cpp main.cpp)
+
+set( NITE2_DIR "${CMAKE_SOURCE_DIR}/dependencies/Nite2.2" )
+include_directories( "${NITE2_DIR}/Include" )
+link_directories( "${NITE2_DIR}/Redist/" )
+
+set( OPENNI2_DIR "${CMAKE_SOURCE_DIR}/dependencies/openni2" )
+include_directories( "${OPENNI2_DIR}/include" )
+link_directories( "${OPENNI2_DIR}/lib/ni2/" )
+
+set( OPENCV_DIR "${CMAKE_SOURCE_DIR}/dependencies/opencv" )
+include_directories("${OPENCV_DIR}/include" )
+link_directories( "${OPENCV_DIR}/lib/")
+
+list( APPEND CMAKE_CXX_FLAGS "-std=c++11 ${CMAKE_CXX_FLAGS}" )
+
+add_executable( ${PROJECT_NAME} ${SRC} )
+target_link_libraries (${PROJECT_NAME} ${OPENNI2_LIBRARIES} OpenNI2 ${OPENCV_LIBRARIES} opencv_core opencv_imgproc opencv_highgui  ${NITE2_LIBRARIES} NiTE2)
+#target_link_libraries (${PROJECT_NAME} ${OPENNI2_LIBRARIES} OpenNI2 NiTE2 ${OPENCV_LIBRARIES} opencv_core opencv_imgproc opencv_highgui)
+#target_link_libraries (${PROJECT_NAME} ${OPENNI2_LIBRARIES} OpenNI2 ${OPENCV_LIBRARIES} opencv_core opencv_imgproc opencv_highgui)
