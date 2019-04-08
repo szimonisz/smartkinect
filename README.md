@@ -31,6 +31,10 @@ Tell libNiTE2 how to find it's dependent dynamic library: libOpenNI2.dylib
 ```
 install_name_tool -change libOpenNI2.dylib /usr/local/opt/openni2/lib/ni2/libOpenNI2.dylib ./Nite2.2/Redist/libNiTE2.dylib
 ```
+Copy dependent header files from OpenNI2 to our Nite2.2 include folder
+```
+cp /usr/local/opt/openni2/include/ni2/{OniCAPI.h,OniPlatform.h,OniCTypes.h,OpenNI.h} ./Nite2.2/Include/
+```
 Create a build folder, and cmake -> make our executable
 ```
 mkdir build && cd build
@@ -47,7 +51,7 @@ cp -r ../Nite2.2/Redist/NiTE2 ./
 ```
 Run the program!
 ```
-./KinectFeed 
+./Build/KinectFeed 
 ```
 
 NOTE: 
