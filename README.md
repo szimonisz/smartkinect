@@ -7,7 +7,7 @@ git clone https://github.com/szimonisz/smartkinect.git
 cd smartkinect
 ./install.sh
 cd build
-make
+./compile.sh
 ./KinectFeed
 #######################################################
 ```
