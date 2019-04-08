@@ -19,7 +19,7 @@ Copy libraries from openni2_libfreenect2_drivers into /usr/local/opt/openni2/lib
 $ cp -r ./openni2_libfreenect2_drivers/. /usr/local/opt/openni2/lib/ni2/Drivers
 ```
 
-Download, unarchive, and place the NiTE2.2 library into a folder called NiTE2.2
+Download, unarchive, and place the NiTE2.2 library into a folder called Nite2.2
 ```
 curl -LO https://bitbucket.org/kaorun55/openni-2.2/raw/2f54272802bfd24ca32f03327fbabaf85ac4a5c4/NITE%202.2%20α/NiTE-MacOSX-x64-2.2.tar.zip
 
