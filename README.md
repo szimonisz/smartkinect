@@ -1,6 +1,16 @@
 # smartkinect
 
-Setup:
+Easy Setup:
+```
+#######################################################
+git clone https://github.com/szimonisz/smartkinect.git
+cd smartkinect
+./install.sh
+./build/KinectFeed
+#######################################################
+```
+
+How ./install.sh works:
 
 complete these commands within root of cloned smartkinect repository folder
 
