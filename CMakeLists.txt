@@ -5,13 +5,15 @@ project( KinectFeed )
 set( CMAKE_BUILD_TYPE Debug )
 set( SRC KinectFeed.h KinectFeed.cpp main.cpp)
 
-find_package(OpenCV)
-
 set( NITE2_DIR "${CMAKE_SOURCE_DIR}/Nite2.2" )
 include_directories( "${NITE2_DIR}/Include" )
 link_directories( "${NITE2_DIR}/Redist/" )
 
-include_directories(${OPENNI2_INCLUDE_DIRS} ${OpenCV_INCLUDE_DIRS})
+set( OPENCV_DIR "/usr/local/opt/opencv@2" )
+include_directories( "${OPENCV_DIR}/include" )
+link_directories( "${OPENCV_DIR}/lib/" )
+
+#include_directories(${OPENNI2_INCLUDE_DIRS} ${OpenCV_INCLUDE_DIRS})
 
 set( OPENNI2_DIR "/usr/local/opt/openni2" )
 include_directories( "${OPENNI2_DIR}/include" )
