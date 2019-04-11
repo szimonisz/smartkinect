@@ -1,0 +1,3 @@
+/Users/kelemen/github_repos/smartkinect/build/CMakeFiles/rebuild_cache.dir
+/Users/kelemen/github_repos/smartkinect/build/CMakeFiles/edit_cache.dir
+/Users/kelemen/github_repos/smartkinect/build/CMakeFiles/KinectFeed.dir
