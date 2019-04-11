@@ -9,7 +9,7 @@ brew install openni2
 brew install opencv@2
 
 echo "Copying openni2_libfreenect2_drivers into openni2's system Drivers folder"
-cp -r ./openni2_libfreenect2_drivers/. /usr/local/opt/openni2/lib/ni2/Drivers
+cp -r ./openni2_libfreenect2_drivers/. /usr/local/opt/openni2/lib/ni2/OpenNI2/Drivers
 
 echo "Downloading opencv@2"
 curl -LO https://homebrew.bintray.com/bottles/opencv@2-2.4.13.7_2.mojave.bottle.tar.gz
