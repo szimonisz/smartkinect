@@ -9,7 +9,7 @@ set( NITE2_DIR "${CMAKE_SOURCE_DIR}/Nite2.2" )
 include_directories( "${NITE2_DIR}/Include" )
 link_directories( "${NITE2_DIR}/Redist/" )
 
-set( OPENCV_DIR "/usr/local/opt/opencv@2" )
+set( OPENCV_DIR "${CMAKE_SOURCE_DIR}/opencv@2/2.4.13.7_2")
 include_directories( "${OPENCV_DIR}/include" )
 link_directories( "${OPENCV_DIR}/lib/" )
 
@@ -23,5 +23,3 @@ list( APPEND CMAKE_CXX_FLAGS "-std=c++11 ${CMAKE_CXX_FLAGS}" )
 
 add_executable( ${PROJECT_NAME} ${SRC} )
 target_link_libraries (${PROJECT_NAME} ${OPENNI2_LIBRARIES} OpenNI2 ${OPENCV_LIBRARIES} opencv_core opencv_imgproc opencv_highgui  ${NITE2_LIBRARIES} NiTE2)
-#target_link_libraries (${PROJECT_NAME} ${OPENNI2_LIBRARIES} OpenNI2 NiTE2 ${OPENCV_LIBRARIES} opencv_core opencv_imgproc opencv_highgui)
-#target_link_libraries (${PROJECT_NAME} ${OPENNI2_LIBRARIES} OpenNI2 ${OPENCV_LIBRARIES} opencv_core opencv_imgproc opencv_highgui)

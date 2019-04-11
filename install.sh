@@ -11,6 +11,14 @@ brew install opencv@2
 echo "Copying openni2_libfreenect2_drivers into openni2's system Drivers folder"
 cp -r ./openni2_libfreenect2_drivers/. /usr/local/opt/openni2/lib/ni2/Drivers
 
+echo "Downloading opencv@2"
+curl -LO https://homebrew.bintray.com/bottles/opencv@2-2.4.13.7_2.mojave.bottle.tar.gz
+
+echo "Unarchiving OpenCV@2.tar"
+tar xvf opencv@2-2.4.13.7_2.mojave.bottle.tar.gz
+#unarchived OpenCV2 lives in folder called opencv@2/2.4.13.7_2
+rm opencv@2-2.4.13.7_2.mojave.bottle.tar.gz
+
 echo "Downloading NiTE 2.2 (almost 200MB will take a second)"
 curl -LO https://bitbucket.org/kaorun55/openni-2.2/raw/2f54272802bfd24ca32f03327fbabaf85ac4a5c4/NITE%202.2%20α/NiTE-MacOSX-x64-2.2.tar.zip
 
@@ -40,8 +48,17 @@ cmake ..
 echo "Building the ./compile.sh helper script for developing"
 cat > compile.sh <<'EOF'
 make
+
 #install_name_tool helper for KinectFeed->libNiTE2.dylib
 install_name_tool -change libNiTE2.dylib @executable_path/../Nite2.2/Redist/libNiTE2.dylib KinectFeed
+#helper for KinectFeed->libopencv_imgproc
+install_name_tool -change @@HOMEBREW_PREFIX@@/opt/opencv@2/lib/libopencv_imgproc.2.4.dylib @executable_path/../opencv@2/2.4.13.7_2/lib/libopencv_imgproc.2.4.dylib KinectFeed
+
+#helper for KinectFeed->libopencv_core
+install_name_tool -change @@HOMEBREW_PREFIX@@/opt/opencv@2/lib/libopencv_core.2.4.dylib @executable_path/../opencv@2/2.4.13.7_2/lib/libopencv_core.2.4.dylib KinectFeed
+
+#helper for KinectFeed->libopencv_highgui
+install_name_tool -change @@HOMEBREW_PREFIX@@/opt/opencv@2/lib/libopencv_highgui.2.4.dylib @executable_path/../opencv@2/2.4.13.7_2/lib/libopencv_highgui.2.4.dylib KinectFeed
 EOF
 chmod +x compile.sh
 
